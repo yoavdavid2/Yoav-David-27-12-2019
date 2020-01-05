@@ -44,7 +44,7 @@ class Favorites extends React.Component{
     if (this.state.fav_data && Object.keys(this.state.fav_data).length) {
       return (
         <div className="card-div">
-          { Object.keys(this.state.fav_data).map((city_name ,index) => {
+          { Object.keys(this.state.fav_data).forEach((city_name ,index) => {
             return (
               <Card className="card" key={index}>
                 <Prediction name={city_name} data={this.state.fav_data[city_name][0]} is_from_fav={true}/>

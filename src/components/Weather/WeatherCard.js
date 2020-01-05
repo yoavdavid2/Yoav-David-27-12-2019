@@ -20,9 +20,15 @@ class WeatherCard extends React.Component {
     this.setState({
       futureData: forecast,
       createForecast: create,
-      currentTemp: current_temp
+      currentTemp: current_temp,
+      favStat: true
     });
   }
+  
+  componentDidUpdate() {
+    this.componentDidMount();
+  }
+
 
   changeFavStat() {
     this.setState({ favStat: !this.state.favStat});
@@ -47,7 +53,6 @@ class WeatherCard extends React.Component {
   }
 
   render() {
-    console.log(this.props.code);
     return (
       <div>
         <Card>

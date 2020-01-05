@@ -43,13 +43,11 @@ class WeatherDetails extends React.Component {
           cityCode: key, 
           cityName: name
         });
-        console.log(this.state.cityCode);
       }
     }
   }
 
   render() {
-    console.log(this.state.cityCode);
     return (
       <div>
         <FormControl className="search-bar">
